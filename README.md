@@ -20,6 +20,7 @@ from nonebot import on_command
 from cooldown import CooldownManager
 from nonebot.adapters.satori import MessageEvent
 
+# 初始化CooldownManager
 cooldown_manager = CooldownManager('cooldown.json', 300, 600) # 可触发指令时间段为300s，冷却时长600s
 
 matcher = on_command()
