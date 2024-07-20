@@ -36,7 +36,6 @@ async def _(event: MessageEvent):
     
     if in_cooldown:
         minutes, seconds = divmod(remaining_time, 60)
-        await matcher.send("指令在冷却哦\n剩余时间：{int(minutes)}分{int(seconds)}秒")
-    else:
-        await matcher.send("指令已执行！")
+        await matcher.finish("指令在冷却哦\n剩余时间：{int(minutes)}分{int(seconds)}秒")
+    await matcher.send("指令已执行！")
 ```
